@@ -14,7 +14,7 @@
 
 ## 编写订阅源
 
-RSSHub 的发展离不开社区的力量，欢迎编写你感兴趣的订阅源[参与我们](/joinus)
+RSSHub 的发展离不开社区的力量，欢迎编写你感兴趣的订阅源[参与我们](/joinus/quick-start.html)
 
 ## 作为 npm 包使用
 
@@ -22,15 +22,29 @@ RSSHub 的发展离不开社区的力量，欢迎编写你感兴趣的订阅源[
 
 ### 安装
 
+<code-group>
+<code-block title="pnpm" active>
+
 ```bash
-npm install rsshub --save
+pnpm add rsshub
 ```
 
-或者使用 Yarn
+</code-block>
+<code-block title="yarnv1">
 
 ```bash
 yarn add rsshub
 ```
+
+</code-block>
+<code-block title="npm">
+
+```bash
+npm install rsshub --save
+```
+
+</code-block>
+</code-group>
 
 ### 使用
 

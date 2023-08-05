@@ -10,6 +10,10 @@ pageClass: routes
 
 <Route author="LogicJake" example="/12306/zxdt" path="/12306/zxdt/:id?" :paramsDesc="['铁路局id，可在 URL 中找到，不填默认显示所有铁路局动态']"/>
 
+### 售票信息
+
+<Route author="Fatpandac" example="/12306/2022-02-19/重庆/永川东" path="/12306/:date/:from/:to/:type?" :paramsDesc="['时间，格式为（YYYY-MM-DD）', '始发站', '终点站', '售票类型，成人和学生可选，默认为成人']"/>
+
 ## All the Flight Deals
 
 ### 特价机票
@@ -21,7 +25,7 @@ pageClass: routes
 1.  单个始发地，例如 「us+new york」, [https://rsshub.app/atfd/us+new york](https://rsshub.app/atfd/us+new%20york)
 2.  逗号分隔多个始发地，例如 「us+new york, gb+london」, [https://rsshub.app/atfd/us+new york, gb+london/](https://rsshub.app/atfd/us+new%20york,gb+london/)
 
-ISO 3166-1 国家代码列表请参见 [维基百科 ISO_3166-1](https://zh.wikipedia.org/wiki/ISO_3166-1)
+ISO 3166-1 国家代码列表请参见 [维基百科 ISO\_3166-1](https://zh.wikipedia.org/wiki/ISO\_3166-1)
 
 </Route>
 
@@ -35,7 +39,7 @@ ISO 3166-1 国家代码列表请参见 [维基百科 ISO_3166-1](https://zh.wiki
 
 伦敦希思罗 ✈ 北京首都国际 <https://rsshub.app/hopper/1/LHR/PEK>
 
-IATA 国际航空运输协会机场代码，参见[维基百科 国际航空运输协会机场代码](https://zh.wikipedia.org/wiki/%E5%9B%BD%E9%99%85%E8%88%AA%E7%A9%BA%E8%BF%90%E8%BE%93%E5%8D%8F%E4%BC%9A%E6%9C%BA%E5%9C%BA%E4%BB%A3%E7%A0%81_(A))
+IATA 国际航空运输协会机场代码，参见[维基百科 国际航空运输协会机场代码](https://zh.wikipedia.org/wiki/%E5%9B%BD%E9%99%85%E8%88%AA%E7%A9%BA%E8%BF%90%E8%BE%93%E5%8D%8F%E4%BC%9A%E6%9C%BA%E5%9C%BA%E4%BB%A3%E7%A0%81\_\(A\))
 
 </Route>
 
@@ -55,11 +59,11 @@ IATA 国际航空运输协会机场代码，参见[维基百科 国际航空运�
 
 ### 优惠信息
 
-<Route author="howel52" example="/flyertea/preferential" path="/flyertea/preferential" />
+<Route author="howel52" example="/flyert/preferential" path="/flyert/preferential" />
 
 ### 信用卡
 
-<Route author="nicolaszf" example="/flyertea/creditcard/zhongxin" path="/flyertea/creditcard/:bank" :paramsDesc="['信用卡板块各银行的拼音简称']">
+<Route author="nicolaszf" example="/flyert/creditcard/zhongxin" path="/flyert/creditcard/:bank" :paramsDesc="['信用卡板块各银行的拼音简称']">
 
 | 信用卡模块 | bank          |
 | ---------- | ------------- |
@@ -77,6 +81,7 @@ IATA 国际航空运输协会机场代码，参见[维基百科 国际航空运�
 | 民生银行   | mingsheng     |
 | 兴业银行   | xingye        |
 | 花旗银行   | huaqi         |
+| 上海银行   | shanghai      |
 | 无卡支付   | wuka          |
 | 投资理财   | 137           |
 | 网站权益汇 | 145           |
@@ -84,11 +89,23 @@ IATA 国际航空运输协会机场代码，参见[维基百科 国际航空运�
 
 </Route>
 
+## 福州地铁
+
+### 通知公告
+
+<Route author="HankChow" example="/fzmtr/announcements" path="/fzmtr/announcements"/>
+
+## 广州地铁
+
+### 新闻
+
+<Route author="HankChow" example="/guangzhoumetro/news" path="/guangzhoumetro/news"/>
+
 ## 国家地理
 
 ### 分类
 
-<Route author="fengkx" example="/natgeo/environment/article" path="/natgeo/:cat/:type?" :paramsDesc="['分类', '类型, 例如`https://www.natgeomedia.com/environment/photo/`对应 cat, type 分别为 environment, photo']"/>
+<Route author="fengkx" example="/natgeo/environment/article" path="/natgeo/:cat/:type?" :paramsDesc="['分类', '类型, 例如`https://www.natgeomedia.com/environment/photo/`对应 `cat`, `type` 分别为 `environment`, `photo`']"/>
 
 ## 活动行
 
@@ -110,6 +127,44 @@ IATA 国际航空运输协会机场代码，参见[维基百科 国际航空运�
 
 </Route>
 
+## 纽约布鲁克林博物馆
+
+<Route author="chazeon"
+example="/brooklynmuseum/exhibitions"
+path="/brooklynmuseum/exhibitions/:state?"
+:paramsDesc="['展览进行的状态：`current` 对应展览当前正在进行，`past` 对应过去的展览，`upcoming` 对应即将举办的展览，默认为 `current`']"
+/>
+
+## 纽约大都会美术馆
+
+<Route author="chazeon"
+example="/metmuseum/exhibitions"
+path="/metmusem/exhibitions/:state?"
+:paramsDesc="['展览进行的状态：`current` 对应展览当前正在进行，`past` 对应过去的展览，`upcoming` 对应即将举办的展览，默认为 `current`']" anticrawler="1"
+/>
+
+## 纽约古根海姆基金会
+
+<Route author="chazeon" example="/guggenheim/exhibitions" path="/guggenheim/exhibitions" />
+
+## 纽约新美术馆
+
+<Route author="chazeon" example="/newmuseum/exhibitions" path="/newmuseum/exhibitions" />
+
+## 纽约犹太人博物馆
+
+<Route author="chazeon" example="/jewishmuseum/exhibitions" path="/jewishmuseum/exhibitions" />
+
+## 芝加哥当代艺术博物馆
+
+<Route author="chazeon" example="/mcachicago/exhibitions" path="/mcachicago/exhibitions" />
+
+## 中国国际航空公司
+
+### 服务公告
+
+<Route author="LandonLi" example="/airchina/announcement" path="/airchina/announcement" radar="1" />
+
 ## 中国美术馆
 
 ### 美术馆新闻
@@ -119,5 +174,15 @@ IATA 国际航空运输协会机场代码，参见[维基百科 国际航空运�
 | 通知公告     | 新闻 | 媒体联报 | 展览预告   | 焦点专题 |
 | ------------ | ---- | -------- | ---------- | -------- |
 | announcement | news | media    | exhibition | specials |
+
+</Route>
+
+## 走进日本
+
+<Route author="laampui" example="/nippon/Politics" path="/nippon/:category?" :paramsDesc="['默认政治，可选如下']">
+
+| 政治     | 经济    | 社会    | 展览预告 | 焦点专题           | 深度报道 | 话题         | 日本信息库 | 日本一蹩      | 人物访谈 | 编辑部通告    |
+| -------- | ------- | ------- | -------- | ------------------ | -------- | ------------ | ---------- | ------------- | -------- | ------------- |
+| Politics | Economy | Society | Culture  | Science,Technology | In-depth | japan-topics | japan-data | japan-glances | People   | Announcements |
 
 </Route>
